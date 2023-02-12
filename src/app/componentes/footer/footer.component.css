@@ -1,0 +1,26 @@
+.contenedor-footer {
+  background-color: #00162f;
+  color: #ffffffbb;
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  align-items: center;
+  padding: 50px 10px;
+  margin-top: 125px;
+  border-top: 1px solid black;
+  box-shadow: 0px 0px 15px #0000005e;
+}
+.contenedor-footer a img {
+  opacity: 75%;
+}
+
+@media screen and (max-width: 540px){
+  .contenedor-footer {
+      display: flex;
+      flex-direction: column;
+  }
+  .contenedor-footer p {
+      margin-top: 25px;
+  }
+}

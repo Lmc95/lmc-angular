@@ -1,0 +1,78 @@
+/* Contenedor padre de las barras de porcentajes */
+.contenedor-skills {
+  color: #ffffffbb;
+}
+.contenedor-skills > h2 {
+  padding: 40px 0 0 20px;
+}
+
+/* Barras de porcentajes */
+.barras-porcentajes {
+  color: #ffffffbb;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: left;
+  align-items: center;
+  padding-bottom: 40px;
+  border-bottom: 1px solid #ffffffad;
+}
+
+.contenedor {
+  width: 40%;
+  margin: 5px 20px;
+}
+
+.nombre {
+  margin: 0; padding: 20px 0 5px 0;
+}
+.barra {
+  width: 100%;
+  background-color: #e0e0e0b7;
+  padding-bottom: 5px;
+  border-radius: 5px;
+  box-shadow: 2px 2px 5px #0000003b;
+}
+.skills {
+  width: 100%;
+  text-align: right;
+  padding: 10px;
+  color: white;
+  font-weight: bold;
+}
+
+/* Animación barras de porcentajes */
+.html {
+  background-color: #119ab3;
+  animation: progresohtml 3s forwards;
+}
+@keyframes progresohtml {
+  0% { width: 0; }
+  100% { width: 70%; }
+}
+
+.css {
+  background-color: #119ab3;
+  animation: progresocss 3s forwards;
+}
+@keyframes progresocss {
+  0% { width: 0; }
+  100% { width: 60%; }
+}
+
+.js {
+  background-color: #119ab3;
+  animation: progresojs 3s forwards;
+}
+@keyframes progresojs {
+  0% { width: 0; }
+  100% { width: 40%; }
+}
+
+
+
+/* Responsive barras de porcentajes */
+@media screen and (max-width: 575px) {
+  .contenedor {
+    width: 85%;
+  }
+}

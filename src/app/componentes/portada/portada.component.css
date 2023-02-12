@@ -1,0 +1,43 @@
+#portada {
+  background-image: url(/angular/assets/imagenes/bg/dark-digital-2.png);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  padding: 5% 0;
+  border: 1px solid black;
+  box-shadow: 0px 0px 10px #00000096;
+  border-bottom-left-radius: 10px; border-bottom-right-radius: 10px;
+}
+
+#foto-perfil img {
+  transition: ease-in-out .3s;
+}
+#foto-perfil img:hover {
+  transform: scale(1.05);
+}
+
+
+#nombre {
+  color: #ffffffad;
+  text-shadow: 0px 0px 2px #00000096;
+}
+#nombre h2, #nombre p {
+  transition: ease-out .3s;
+}
+#nombre h2:hover, #nombre p:hover {
+  transform: scale(1.05);
+  color: white;
+}
+
+
+#redes a {
+  margin: 5px 20px 5px 0;
+}
+
+
+
+@media screen and (max-width: 575px) {
+  #foto-perfil {
+    margin-bottom: 25px;
+  }
+}
