@@ -1,10 +1,70 @@
-
-#contenedor-exp-edu {
+.contenedor-exp-skills{
   color: #ffffffbb;
-  border: 1px solid #ffffffad; border-left: none; border-right: none;
-  padding: 4% 0 4% 20px;
+}
+#contenedor-exp {
+  margin-bottom: 30px;
+}
+#contenedor-edu {
+  padding-bottom: 10px;
 }
 
-#contenedor-exp-edu h3 {
+.editar {
+  border: none;
+  border-radius: 8px;
+  background-color: #30a591;
+  transition: ease-out .3s;
+}
+.editar:hover {
+  background-color: #29dbbe;
+}
+
+.borrar {
+  border: none;
+  border-radius: 8px;
+  background-color: #eb5757;
+  transition: ease-out .3s;
+}
+.borrar:hover {
+  background-color: #e62828;
+}
+
+
+.experiencia {
+  background-color: #00000073;
+  padding: 10px;
+  border-radius: 8px;
+}
+.nombre-experiencia .nombre{
+  font-size: 1.5rem;
+  font-weight: 500;
+  padding: 0; margin: 5px 0;
+}
+.nombre-experiencia {
+  width: 100%;
+  border-bottom: 1px solid #ffffff50;
   padding-bottom: 10px;
+}
+
+
+
+.educacion {
+  background-color: #00000073;
+  padding: 10px;
+  border-radius: 8px;
+}
+.nombre-educacion .nombre{
+  font-size: 1.5rem;
+  font-weight: 500;
+  padding: 0; margin: 5px 0;
+}
+.nombre-educacion {
+  width: 100%;
+  border-bottom: 1px solid #ffffff50;
+  padding-bottom: 10px;
+}
+
+
+
+.botones button {
+  margin: 5px 0;
 }

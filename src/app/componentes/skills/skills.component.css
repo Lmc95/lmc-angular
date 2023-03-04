@@ -1,78 +1,61 @@
-/* Contenedor padre de las barras de porcentajes */
-.contenedor-skills {
+:root {
+  --porcentaje-habilidad: 20%;
+  --num-habilidad: calc(var()* 1%)
+}
+#h2-habilidad {
+  background-color: #00000073;
+  color: #ffffffcc;
+  padding: 10px;
+  border-radius: 8px;
+}
+.lenguaje {
   color: #ffffffbb;
-}
-.contenedor-skills > h2 {
-  padding: 40px 0 0 20px;
-}
-
-/* Barras de porcentajes */
-.barras-porcentajes {
-  color: #ffffffbb;
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: left;
-  align-items: center;
-  padding-bottom: 40px;
-  border-bottom: 1px solid #ffffffad;
-}
-
-.contenedor {
-  width: 40%;
-  margin: 5px 20px;
-}
-
-.nombre {
-  margin: 0; padding: 20px 0 5px 0;
+  margin: 20px 0 5px;
+  font-size: 1rem;
+  font-weight: 500;
+  text-shadow: 1px 1px 2px black;
 }
 .barra {
-  width: 100%;
-  background-color: #e0e0e0b7;
-  padding-bottom: 5px;
-  border-radius: 5px;
-  box-shadow: 2px 2px 5px #0000003b;
+  background-color: #bebebe8c;
+  padding: 0 1px 5px 0;
+  border-bottom-right-radius: 8px;
+  box-shadow: 1px 1px 5px #00000046;
 }
-.skills {
+
+.editar {
+  margin: 5px 2px;
+  border: none;
+  border-radius: 8px;
+  background-color: #30a591;
+  transition: ease-out .3s;
+}
+.editar:hover {
+  background-color: #29dbbe;
+}
+.borrar {
+  margin: 5px 2px;
+  border: none;
+  border-radius: 8px;
+  background-color: #eb5757;
+  transition: ease-out .3s;
+}
+.borrar:hover {
+  background-color: #e62828;
+}
+
+#habilidad {
+  --porcentaje: 0;
+  background-color: #ffffffd2;
+  color: #000000bb;
   width: 100%;
-  text-align: right;
-  padding: 10px;
-  color: white;
+  text-align: left;
+  font-size: .8rem;
   font-weight: bold;
+  padding: 12px;
+  animation: progresonombre 3s forwards;
 }
 
-/* Animación barras de porcentajes */
-.html {
-  background-color: #119ab3;
-  animation: progresohtml 3s forwards;
-}
-@keyframes progresohtml {
+@keyframes progresonombre {
   0% { width: 0; }
-  100% { width: 70%; }
-}
-
-.css {
-  background-color: #119ab3;
-  animation: progresocss 3s forwards;
-}
-@keyframes progresocss {
-  0% { width: 0; }
-  100% { width: 60%; }
-}
-
-.js {
-  background-color: #119ab3;
-  animation: progresojs 3s forwards;
-}
-@keyframes progresojs {
-  0% { width: 0; }
-  100% { width: 40%; }
-}
-
-
-
-/* Responsive barras de porcentajes */
-@media screen and (max-width: 575px) {
-  .contenedor {
-    width: 85%;
-  }
+  100% { width: calc(var(--porcentaje)*1); }
 }

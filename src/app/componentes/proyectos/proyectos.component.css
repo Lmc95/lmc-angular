@@ -1,7 +1,9 @@
-.contenedor-proyectos h2 {
-  margin: 40px 0 20px 0; padding-left: 20px;
-  width: 100%;
+#h2-proyectos {
+  background-color: #00000073;
+  padding: 10px;
+  border-radius: 8px;
   color: #ffffffbb;
+  margin-top: 30px;
 }
 
 .carrusel {

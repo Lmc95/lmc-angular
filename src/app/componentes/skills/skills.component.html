@@ -1,30 +1,47 @@
-<div class="contenedor-skills d-flex flex-column justify-content-center aling-items-center w-100">
+<div class="contenedor-skills d-flex justify-content-center align-items-center w-100">
+  <div class="row container-md">
 
+    <h2 id="h2-habilidad" class="container-lg habilidades mt-4">Habilidades</h2>
 
-  <h2 class="container-md">Habilidades</h2>
-  <div class="barras-porcentajes container-lg">
-    <div class="contenedor">
-      <p class="nombre">HTML</p>
-      <div class="barra">
-        <div class="skills html"></div>
-      </div>
+    <div class="col-lg-2 w-100">
+      <button type="button" routerLink="/nueva-habilidad" class="btn btn-light mb-1 mt-2 pt-1 pb-1" *ngIf="isLogged">
+        Añadir
+      </button>
     </div>
 
-    <div class="contenedor">
-      <p class="nombre">CSS</p>
+    <!--Inicio de barra progreso-->
+    <div class="cont-habilidades col-lg-5" *ngFor="let habilidad of habilidad">
+      <p class="lenguaje">{{habilidad.nombre}} <!--Variable nombre--></p>
       <div class="barra">
-        <div class="skills css"></div>
+        <div id="habilidad" class="nombre" [style.--porcentaje.%]="habilidad.porcentaje">{{habilidad.porcentaje}}%</div>
       </div>
-    </div>
 
-    <div class="contenedor">
-      <p class="nombre">JAVASCRIPT</p>
-      <div class="barra">
-        <div class="skills js"></div>
-      </div>
+      <!--Botones editar y borrar habilidad-->
+      <td *ngIf="isLogged">
+        <button class="editar" routerLink="/editskill/{{habilidad.id}}"><i class="bi bi-pencil"></i></button>
+      </td>
+
+      <td *ngIf="isLogged">
+        <button class="borrar" (click)="delete(habilidad.id)"><i class="bi bi-trash3"></i></button>
+      </td>
     </div>
 
   </div>
-
-
 </div>
+
+
+<!-- BOTONES PARA AÑADIR, EDITAR Y BORRAR --
+
+  <div class="col-lg-2">
+      <button type="button" routerLink="/nueva-habilidad" class="btn btn-light mb-1 mt-2 pt-1 pb-1" *ngIf="isLogged">Añadir</button>
+  </div>
+
+
+  <td *ngIf="isLogged">
+      <button class="editar" routerLink="/edithys/{{habilidad.id}}"><i class="bi bi-pencil"></i></button>
+  </td>
+
+  <td *ngIf="isLogged">
+      <button class="borrar" (click)="delete(habilidad.id)"><i class="bi bi-trash3"></i></button>
+  </td>
+-->

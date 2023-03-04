@@ -1,5 +1,5 @@
 #portada {
-  background-image: url(../imagenes/bg/dark-digital-2.png);
+  background-image: url(src/assets/imagenes/bg/dark-digital-2.png);
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
@@ -32,6 +32,18 @@
 
 #redes a {
   margin: 5px 20px 5px 0;
+}
+
+#sobre-mi {
+  margin: 25px 0 25px; padding: 0;
+  color: #ffffffbb;
+  width: 100%;
+}
+#sobre-mi h2 {
+  background-color: #00000073;
+  width: 100%;
+  padding: 8px;
+  border-radius: 8px;
 }
 
 

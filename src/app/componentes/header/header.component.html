@@ -24,7 +24,8 @@
           </li>
         </ul>
 
-        <button id="btn-login">Login</button>
+        <button id="btn-login" (click)="login()" *ngIf="!isLogged">Login</button>
+        <button id="btn-login" (click)="onLogOut()" *ngIf="isLogged">Logout</button>
       </div>
     </div>
   </nav>
