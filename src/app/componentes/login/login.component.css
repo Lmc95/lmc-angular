@@ -18,7 +18,18 @@
   border-radius: 20px;
   width: 400px;
   height: 350px;
-  background-color: #4790e42d;
+  background-color: #00000069;
+}
+#cont-login > h2 {
+  color: #ffffffbb;
+  width: 100%;
+  border-bottom: 1px solid #ffffff9d;
+  margin-bottom: 30px;
+}
+#cont-login span {
+  margin: 5px 0 -5px;
+  color: #ffffffbb;
+  font-weight: 500;
 }
 
 

@@ -1,13 +1,15 @@
 <div class="contenedor-login">
 
-
   <form id="cont-login" #f="ngForm" (ngSubmit)="onLogin()" novalidate>
+    <h2>Iniciar Sesión</h2>
 
+    <span>Usuario</span>
     <div class="user">
-      <input type="text" name="nombreUsuario" id="nombreUsuario" placeholder="Usuario" [(ngModel)]="nombreUsuario" name="nombreUsuario" required/>
       <label for="nombreUsuario"></label>
+      <input type="text" name="nombreUsuario" id="nombreUsuario" placeholder="Usuario" [(ngModel)]="nombreUsuario" name="nombreUsuario" required/>
     </div>
 
+    <span>Contraseña</span>
     <div class="pw">
       <input type="password" id="password" placeholder="Contraseña" [(ngModel)]="password" name="password" required>
       <label for="password"></label>

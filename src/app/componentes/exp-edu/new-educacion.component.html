@@ -1,7 +1,8 @@
 <div class="container">
-  <div class="row">
-    <div>
-      <form (ngSubmit)="onCreateEdu()" novalidate #f="ngForm">
+  <div id="formulario-nuevaedu" class="row">
+    <div class="col-sm-8">
+      <h2>Nueva educacion</h2>
+      <form id="cont-edu" (ngSubmit)="onCreateEdu()" novalidate #f="ngForm">
         <div class="form-group">
           <label for="nombreE">¿Donde estudiaste?</label>
           <input type="text" class="form-control" name="nombreEdu" id="nombreEdu" [(ngModel)]="nombreE" required>
@@ -10,8 +11,8 @@
           <label for="descripcionE">Descripcion de estudios</label>
           <input type="text" class="form-control" name="descripcionE" id="descripcionE" [(ngModel)]="descripcionE" required>
         </div>
-
-        <button class="btn btn-light">
+        <br>
+        <button id="nueva-educacion-btn" class="btn btn-light w-100">
           Añadir
         </button>
       </form>

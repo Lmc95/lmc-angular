@@ -1,4 +1,3 @@
-import { AUTO_STYLE } from '@angular/animations';
 import { Injectable } from '@angular/core';
 
 
@@ -9,6 +8,7 @@ const AUTHORITIES_KEY = 'AuthAuthorities';
 @Injectable({
   providedIn: 'root'
 })
+
 export class TokenService {
   roles: Array<string> = [];
 

@@ -1,7 +1,7 @@
 <div class="container">
-  <div class="row">
-    <div>
-      <form (ngSubmit)="onCreate()" novalidate #f="ngForm">
+  <div id="formulario-perfil" class="row container-md">
+    <div class="col-md-8">
+      <form id="cont-perfil" (ngSubmit)="onCreate()" novalidate #f="ngForm">
         <div class="form-group">
           <label for="nombre">Nueva Habilidad</label>
           <input type="text" class="form-control" name="nombre" id="nombre" [(ngModel)]="nombre" required>

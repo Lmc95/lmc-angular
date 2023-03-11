@@ -1,10 +1,10 @@
 <div class="contenedor-skills d-flex justify-content-center align-items-center w-100">
-  <div class="row container-md">
+  <div class="row container-lg">
 
     <h2 id="h2-habilidad" class="container-lg habilidades mt-4">Habilidades</h2>
 
     <div class="col-lg-2 w-100">
-      <button type="button" routerLink="/nueva-habilidad" class="btn btn-light mb-1 mt-2 pt-1 pb-1" *ngIf="isLogged">
+      <button type="button" routerLink="/nueva-habilidad" class="btn btn-light mb-1 mt-2 pt-1 pb-1" *ngIf="isLogged && isAdminUser">
         Añadir
       </button>
     </div>
@@ -17,17 +17,18 @@
       </div>
 
       <!--Botones editar y borrar habilidad-->
-      <td *ngIf="isLogged">
+      <td *ngIf="isLogged && isAdminUser">
         <button class="editar" routerLink="/editskill/{{habilidad.id}}"><i class="bi bi-pencil"></i></button>
       </td>
 
-      <td *ngIf="isLogged">
+      <td *ngIf="isLogged && isAdminUser">
         <button class="borrar" (click)="delete(habilidad.id)"><i class="bi bi-trash3"></i></button>
       </td>
     </div>
 
   </div>
 </div>
+
 
 
 <!-- BOTONES PARA AÑADIR, EDITAR Y BORRAR --

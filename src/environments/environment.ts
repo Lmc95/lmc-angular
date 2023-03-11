@@ -3,10 +3,19 @@
 // The list of file replacements can be found in `angular.json`.
 
 export const environment = {
+  firebase: {
+    projectId: 'frontlmc',
+    appId: '1:108988698439:web:856033ba3caca788e6c662',
+    storageBucket: 'frontlmc.appspot.com',
+    locationId: 'southamerica-east1',
+    apiKey: 'AIzaSyDLbb71cDE3WFGDBv_qvffXbLCPyN4DhiA',
+    authDomain: 'frontlmc.firebaseapp.com',
+    messagingSenderId: '108988698439',
+  },
   production: false,
 
-  URL: 'http://localhost:8080'
-  //URL: 'https://frontlmc.web.app'
+  EURL: 'http://localhost:8080'
+  //EURL: 'https://frontlmc.web.app'
 };
 
 /*

@@ -26,6 +26,12 @@ export class ExpEduComponent {
     }else {
       this.isLogged = false;
     }
+
+    // Obtener el valor de sessionStorage
+    const authUsername = window.sessionStorage.getItem('AuthUsername');
+
+    // Verificar si el valor es "admin"
+      this.isAdminUser = authUsername === 'admin';
   }
 
   cargarExperiencia(): void {
@@ -56,6 +62,9 @@ export class ExpEduComponent {
       )
     }
   }
+
+  // Agregar esta propiedad para verificar si el usuario es admin o no
+  isAdminUser = false;
 }
 
 

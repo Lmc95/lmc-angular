@@ -1,0 +1,52 @@
+#formulario-editedu {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 5% 0;
+  color: #ffffffbb;
+  font-weight: 500;
+  font-size: 1.2rem;
+}
+
+#formulario-editedu > div {
+  background-color: #00000069;
+  padding: 20px 20px;
+  border-radius: 10px;
+}
+#formulario-editedu div h2 {
+  width: 100%;
+  border-bottom: 1px solid #ffffff9d;
+  margin-bottom: 30px;
+}
+
+#cont-editedu div{
+  margin: 12px 0;
+}
+
+#cont-editedu div label{
+  margin: 5px 0 5px;
+}
+
+
+#cont-editedu div input {
+  background-color: #ffffffea;
+  box-shadow: 1px 1px 4px black;
+  border-radius: 8px;
+}
+
+#editar-educacion-btn {
+  border-radius: 8px;
+  border: 1px solid #ffffff85;
+  padding: 8px 0;
+  font-weight: 500;
+  background-color: #ffffff00;
+  color: white;
+  transition: ease-out .3s;
+}
+#editar-educacion-btn:hover {
+  color: white;
+  text-shadow: 0 0 2px black, 0 0 3px black;
+  border: 1px solid #00000080;
+  background-color: #0070da;
+  box-shadow: 2px 2px 4px #00000080;
+}

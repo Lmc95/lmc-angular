@@ -1,0 +1,30 @@
+#formulario-perfil {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 5% 0;
+  color: #ffffffbb;
+  font-weight: 500;
+  font-size: 1.2rem;
+}
+
+#formulario-perfil > div {
+  background-color: #00000069;
+  padding: 20px 20px;
+  border-radius: 10px;
+}
+
+#cont-perfil div{
+  margin: 12px 0;
+}
+
+#cont-perfil div label{
+  margin: 5px 0 5px;
+}
+
+
+#cont-perfil div input {
+  background-color: #ffffffea;
+  box-shadow: 1px 1px 4px black;
+  border-radius: 8px;
+}

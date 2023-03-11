@@ -22,14 +22,14 @@
   background-color: #4c9dd38e;
   border: none;
   color: #ffffffe0;
-  box-shadow: 0px 0px 2px white, 0px 0px 2px white;
+  box-shadow: 0px 0px 1px white, 0px 0px 2px white;
   transition: ease-in-out .3s;
 }
 #btn-login:hover {
   color: white;
   text-shadow: 0px 0px 2px black;
-  box-shadow: 0px 0px 10px white;
-  background-color: #006ec9a9;
+  box-shadow: 0px 0px 5px white;
+  background-color: #006fc9cb;
 }
 
 .navbar .navbar-toggler {

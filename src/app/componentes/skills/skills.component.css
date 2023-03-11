@@ -26,11 +26,11 @@
   margin: 5px 2px;
   border: none;
   border-radius: 8px;
-  background-color: #30a591;
+  background-color: #cbe8ff;
   transition: ease-out .3s;
 }
 .editar:hover {
-  background-color: #29dbbe;
+  background-color: #4ba8ff;
 }
 .borrar {
   margin: 5px 2px;
@@ -54,6 +54,7 @@
   padding: 12px;
   animation: progresonombre 3s forwards;
 }
+
 
 @keyframes progresonombre {
   0% { width: 0; }

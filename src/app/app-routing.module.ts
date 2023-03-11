@@ -6,10 +6,11 @@ import { NewEducacionComponent } from './componentes/exp-edu/new-educacion.compo
 import { NewExperienciaComponent } from './componentes/exp-edu/new-experiencia.component';
 import { HomeComponent } from './componentes/home/home.component';
 import { LoginComponent } from './componentes/login/login.component';
-import { EditPerfilComponent } from './componentes/portada/edit-perfil.component';
+import { EditPerfilComponent } from './componentes/perfil/edit-perfil.component';
 import { NewProjectsComponent } from './componentes/proyectos/new-projects.component';
 import { EditSkillsComponent } from './componentes/skills/edit-skills.component';
 import { NewSkillsComponent } from './componentes/skills/new-skills.component';
+import { EditProjectsComponent } from './componentes/proyectos/edit-projects.component';
 
 const routes: Routes = [
   { path:'', component: HomeComponent },
@@ -20,8 +21,9 @@ const routes: Routes = [
   { path: 'editedu/:id', component: EditEducacionComponent },
   { path: 'nueva-habilidad', component: NewSkillsComponent },
   { path: 'editskill/:id', component: EditSkillsComponent},
-  { path: 'editperfil/:id', component: EditPerfilComponent},
-  { path: 'nuevo-proyecto', component: NewProjectsComponent}
+  { path: 'nuevo-proyecto', component: NewProjectsComponent},
+  { path: 'editar-perfil/:id', component: EditPerfilComponent},
+  { path: 'editproject/:id', component: EditProjectsComponent}
 ];
 
 @NgModule({

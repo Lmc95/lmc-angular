@@ -2,15 +2,13 @@ import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
-import { AcercaDeComponent } from './componentes/acerca-de/acerca-de.component';
 import { ExpEduComponent } from './componentes/exp-edu/exp-edu.component';
 import { FooterComponent } from './componentes/footer/footer.component';
 import { HeaderComponent } from './componentes/header/header.component';
-import { PortadaComponent } from './componentes/portada/portada.component';
 import { ProyectosComponent } from './componentes/proyectos/proyectos.component';
 import { SkillsComponent } from './componentes/skills/skills.component';
 import { FormsModule } from '@angular/forms';
-import { HttpClientModule } from '@angular/common/http';
+import { HttpClientModule, HTTP_INTERCEPTORS } from '@angular/common/http';
 import { HomeComponent } from './componentes/home/home.component';
 import { LoginComponent } from './componentes/login/login.component';
 import { interceptorProvider } from './service/interceptor-service';
@@ -20,19 +18,22 @@ import { NewEducacionComponent } from './componentes/exp-edu/new-educacion.compo
 import { EditEducacionComponent } from './componentes/exp-edu/edit-educacion.component';
 import { EditSkillsComponent } from './componentes/skills/edit-skills.component';
 import { NewSkillsComponent } from './componentes/skills/new-skills.component';
-import { EditPerfilComponent } from './componentes/portada/edit-perfil.component';
+import { initializeApp,provideFirebaseApp } from '@angular/fire/app';
+import { environment } from '../environments/environment';
+import { provideStorage,getStorage } from '@angular/fire/storage';
+import { PerfilComponent } from './componentes/perfil/perfil.component';
+import { ImageService } from './service/image.service';
+import { EditPerfilComponent } from './componentes/perfil/edit-perfil.component';
 import { NewProjectsComponent } from './componentes/proyectos/new-projects.component';
-
-
+import { ImagenPerfilService } from './service/imagen-perfil.service';
+import { EditProjectsComponent } from './componentes/proyectos/edit-projects.component';
 
 @NgModule({
   declarations: [
     AppComponent,
-    AcercaDeComponent,
     ExpEduComponent,
     FooterComponent,
     HeaderComponent,
-    PortadaComponent,
     ProyectosComponent,
     SkillsComponent,
     HomeComponent,
@@ -43,17 +44,24 @@ import { NewProjectsComponent } from './componentes/proyectos/new-projects.compo
     EditEducacionComponent,
     EditSkillsComponent,
     NewSkillsComponent,
+    PerfilComponent,
     EditPerfilComponent,
-    NewProjectsComponent
+    NewProjectsComponent,
+    EditProjectsComponent
   ],
   imports: [
     BrowserModule,
+    FormsModule,
     AppRoutingModule,
     HttpClientModule,
-    FormsModule
+    FormsModule,
+    provideFirebaseApp(() => initializeApp(environment.firebase)),
+    provideStorage(() => getStorage())
   ],
   providers: [
-    interceptorProvider
+    interceptorProvider,
+    ImageService,
+    ImagenPerfilService
   ],
   bootstrap: [AppComponent]
 })

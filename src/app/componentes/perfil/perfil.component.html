@@ -1,0 +1,37 @@
+<div class="contenedor-perfil w-100 d-flex flex-column justify-content-center align-items-center" *ngIf="persona">
+
+  <div id="portada" class="row container-lg d-flex justify-content-center aling-items-center" >
+
+    <div class="columna col-sm-4 d-flex justify-content-center align-items-center">
+      <div class="foto">
+        <span id="alt">Foto de perfil</span>
+        <img src={{persona.img}} alt="">
+      </div>
+    </div>
+
+    <div id="nombre-apellido" class="columna col-sm-8 d-flex flex-column justify-content-center align-items-center">
+      <h2>{{persona.nombre}} {{persona.apellido}}</h2>
+      <div class="redes">
+        <a href="#"><img src="/assets/imagenes/ico/facebook.png" alt="" width="23px"></a>
+        <a href="#"><img src="/assets/imagenes/ico/instagram.png" alt="" width="23px"></a>
+        <a href="#"><img src="/assets/imagenes/ico/linkedin.png" alt="" width="23px"></a>
+      </div>
+
+    </div>
+  </div>
+  <div id="boton-editar" class="container-lg p-0">
+    <button type="button" routerLink="/editar-perfil/1" class="btn btn-light mb-1 mt-2 pt-1 pb-1" *ngIf="isLogged && isAdminUser">
+      Editar Perfil
+    </button>
+  </div>
+
+  <div class="row container-lg d-flex justify-content-center align-items-center">
+
+    <h2 id="sobre-mi">Sobre mi</h2>
+    <div class="sobre-mi container-lg">
+      <p>{{persona.descripcion}}</p>
+    </div>
+
+  </div>
+
+</div>

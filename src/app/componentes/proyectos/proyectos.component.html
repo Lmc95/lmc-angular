@@ -4,7 +4,7 @@
     <h2 id="h2-proyectos">Proyectos</h2>
 
     <div class="col-lg-2 w-100">
-      <button type="button" routerLink="/nueva-habilidad" class="btn btn-light mb-1 mt-2 pt-1 pb-1" *ngIf="isLogged">
+      <button type="button" routerLink="/nuevo-proyecto" class="btn btn-light mb-1 mt-2 pt-1 pb-1" *ngIf="isLogged && isAdminUser">
         Añadir
       </button>
     </div>
@@ -13,12 +13,18 @@
 
       <div class="carrusel container-md">
 
-        <div class="carta" *ngFor="let Proyectos of proyectos">
-          <a href="#"><img src="assets/imagenes/img/card-2.jpg" alt="" width="100%"></a>
-          <div class="info-carta">
-            <h3>{{Proyectos.nombre}}</h3>
-            <p>{{Proyectos.descripcion}}</p>
+        <div class="carta" *ngFor="let proyecto of proyectos">
+          <a href={{proyecto.proyectoUrl}} target="_blank"><img src={{proyecto.img}} alt="" width="100%"></a>
+          <div id="botones-card" *ngIf="isLogged && isAdminUser">
+            <button class="editar mt-1" routerLink="/editproject/{{proyecto.id}}"><i class="bi bi-pencil"></i></button>
+            <button class="borrar" (click)="delete(proyecto.id)"><i class="bi bi-trash3"></i></button>
           </div>
+          <div class="info-carta">
+            <h3>{{proyecto.nombre}}</h3>
+            <p>{{proyecto.descripcion}}</p>
+
+          </div>
+
         </div>
 
       </div>
@@ -26,3 +32,5 @@
     </div>
 
   </div>
+</div>
+

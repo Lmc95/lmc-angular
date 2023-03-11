@@ -1,7 +1,7 @@
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { Observable } from 'rxjs';
-import { LoginComponent } from '../componentes/login/login.component';
+import { environment } from 'src/environments/environment';
 import { JwtDto } from '../model/jwt-dto';
 import { LoginUsuario } from '../model/login-usuario';
 import { NuevoUsuario } from '../model/nuevo-usuario';
@@ -10,7 +10,8 @@ import { NuevoUsuario } from '../model/nuevo-usuario';
   providedIn: 'root'
 })
 export class AuthService {
-  authURL = 'http://localhost:8080/auth/';
+  //authURL = 'http://localhost:8080/auth/';
+  authURL = environment.EURL + '/auth/';
 
   constructor(private httpClient: HttpClient) { }
 
@@ -22,4 +23,9 @@ export class AuthService {
   public login(loginUsuario: LoginUsuario): Observable<JwtDto> {
     return this.httpClient.post<JwtDto>(this.authURL + 'login', loginUsuario);
   }
+
+  public getCurrentUser(): Observable<any> {
+    return this.httpClient.get<any>(this.authURL + 'user');
+  }
+
 }
