@@ -14,8 +14,8 @@ export const environment = {
   },
   production: false,
 
-  EURL: 'http://localhost:8080'
-  //EURL: 'https://frontlmc.web.app'
+  //EURL: 'http://localhost:8080'
+  EURL: 'https://frontlmc.web.app'
 };
 
 /*
