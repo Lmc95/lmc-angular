@@ -18,11 +18,12 @@ export class PersonaService {
   }
 
   public detail(id: number): Observable<Persona>{
-    return this.httpClient.get<Persona>(this.URL + `detail/${id}`);
+    console.log('URL:', this.URL + `detail/`+ 1);
+    return this.httpClient.get<Persona>(this.URL + `detail/` + 1);
   }
 
   public update(id: number, persona: Persona): Observable<any>{
-    return this.httpClient.put<any>(this.URL + `update/${id}`, persona);
+    return this.httpClient.put<any>(this.URL + `update/` + 1, persona);
   }
 
 }
