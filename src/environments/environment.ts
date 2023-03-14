@@ -15,7 +15,7 @@ export const environment = {
   production: false,
 
   //EURL: 'http://localhost:8080'
-  EURL: 'https://backendlmc.onrender.com'
+  EURL: 'https://lmc-backend.onrender.com'
 };
 
 /*

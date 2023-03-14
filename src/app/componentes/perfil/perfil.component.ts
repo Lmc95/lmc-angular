@@ -64,7 +64,7 @@ export class PerfilComponent implements OnInit{
   }
 
   cargarPersona(){
-    this.personaService.detail(0).subscribe(data => {this.persona = data})
+    this.personaService.detail(1).subscribe(data => {this.persona = data})
   }
 
   // Agregar esta propiedad para verificar si el usuario es admin o no
