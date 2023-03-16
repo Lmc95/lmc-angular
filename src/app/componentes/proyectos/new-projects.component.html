@@ -1,4 +1,13 @@
-<div id="contenedor-perfil" class="container-md">
+<div class="nuevo-proyecto-permisos container-md d-flex justify-content-center align-items-center" *ngIf="!isAdminUser">
+  <div class="cont-aviso">
+    <h2>No tienes permisos para añadir proyectos</h2>
+    <h3>Inicia sesion y vuelve a intentar.</h3>
+    <br>
+    <a aria-current="page" href="">Volver</a>
+  </div>
+</div>
+
+<div id="contenedor-perfil" class="container-md" *ngIf="isAdminUser">
   <div id="formulario-perfil" class="row container-md">
     <div class="col-md-8">
       <h2>Nuevo proyecto</h2>

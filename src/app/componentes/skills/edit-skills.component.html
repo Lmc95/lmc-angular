@@ -1,5 +1,14 @@
-<div class="container" *ngIf="habilidad">
-  <div id="formulario-editar" class="row">
+<div class="editar-habilidad-permisos container-md d-flex justify-content-center align-items-center" *ngIf="!isAdminUser">
+  <div class="cont-aviso">
+    <h2>No tienes permisos para editar habilidad</h2>
+    <h3>Inicia sesion y vuelve a intentar.</h3>
+    <br>
+    <a aria-current="page" href="">Volver</a>
+  </div>
+</div>
+
+<div class="container" *ngIf="isAdminUser">
+  <div id="formulario-editar" class="row" *ngIf="habilidad">
     <div class="col-md-8">
       <h2>Editar habilidad</h2>
       <form id="cont-skill" (ngSubmit)="onUpdate()" novalidate #f="ngForm">

@@ -15,7 +15,13 @@ export class NewEducacionComponent {
   constructor(private educacionS: EducacionService, private router: Router) { }
 
   ngOnInit(): void{
+    // Obtener el valor de sessionStorage
+    const authUsername = window.sessionStorage.getItem('AuthUsername');
+
+    // Verificar si el valor es "admin"
+    this.isAdminUser = authUsername === 'admin';
   }
+  isAdminUser = false;
 
   onCreateEdu(): void {
     const educacion = new Educacion(this.nombreE, this.descripcionE);

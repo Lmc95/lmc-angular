@@ -23,7 +23,14 @@ export class EditPerfilComponent implements OnInit {
       this.router.navigate(['']);
     }
     )
+
+        // Obtener el valor de sessionStorage
+        const authUsername = window.sessionStorage.getItem('AuthUsername');
+
+        // Verificar si el valor es "admin"
+        this.isAdminUser = authUsername === 'admin';
   }
+  isAdminUser = false;
 
   onUpdate(): void {
     const id = this.activatedRouter.snapshot.params['id'];
@@ -42,4 +49,5 @@ export class EditPerfilComponent implements OnInit {
     const name = "perfil_" + id;
     this.imagenService.uploadImg($event, name)
   }
+
 }

@@ -1,6 +1,15 @@
-<div id="contenedor-perfil" class="container-md" *ngIf="persona">
+<div class="editar-perfil-permisos container-md d-flex justify-content-center align-items-center" *ngIf="!isAdminUser">
+  <div class="cont-aviso">
+    <h2>No tienes permisos para editar perfil</h2>
+    <h3>Inicia sesion y vuelve a intentar.</h3>
+    <br>
+    <a aria-current="page" href="">Volver</a>
+  </div>
+</div>
 
-  <div id="formulario-perfil" class="row container-md">
+<div id="contenedor-perfil" class="container-md" *ngIf="isAdminUser">
+
+  <div id="formulario-perfil" class="row container-md" *ngIf="persona">
     <div class="col-md-8">
       <h2>Editar perfil</h2>
       <form id="cont-perfil" (ngSubmit)="onUpdate()" novalidate #f="ngForm">

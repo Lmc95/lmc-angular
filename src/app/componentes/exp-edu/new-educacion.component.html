@@ -1,4 +1,13 @@
-<div class="container">
+<div class="nueva-educacion-permisos container-md d-flex justify-content-center align-items-center" *ngIf="!isAdminUser">
+  <div class="cont-aviso">
+    <h2>No tienes permisos para añadir educacion</h2>
+    <h3>Inicia sesion y vuelve a intentar.</h3>
+    <br>
+    <a aria-current="page" href="">Volver</a>
+  </div>
+</div>
+
+<div class="container" *ngIf="isAdminUser">
   <div id="formulario-nuevaedu" class="row">
     <div class="col-sm-8">
       <h2>Nueva educacion</h2>

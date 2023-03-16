@@ -18,7 +18,7 @@ export class PersonaService {
   }
 
   public detail(id: number): Observable<Persona>{
-    console.log('URL:', this.URL + `detail/`+ 1);
+    //console.log('URL:', this.URL + `detail/${id}`);
     return this.httpClient.get<Persona>(this.URL + `detail/${id}`);
   }
 

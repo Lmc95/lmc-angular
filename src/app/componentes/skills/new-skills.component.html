@@ -1,4 +1,13 @@
-<div class="container">
+<div class="nueva-habilidad-permisos container-md d-flex justify-content-center align-items-center" *ngIf="!isAdminUser">
+  <div class="cont-aviso">
+    <h2>No tienes permisos para añadir habilidad</h2>
+    <h3>Inicia sesion y vuelve a intentar.</h3>
+    <br>
+    <a aria-current="page" href="">Volver</a>
+  </div>
+</div>
+
+<div class="container" *ngIf="isAdminUser">
   <div id="formulario-perfil" class="row container-md">
     <div class="col-md-8">
       <form id="cont-perfil" (ngSubmit)="onCreate()" novalidate #f="ngForm">

@@ -17,7 +17,13 @@ export class NewProjectsComponent implements OnInit {
   constructor(private projectService: SProyectosService, public imageService: ImageService, private router: Router) { }
 
   ngOnInit(): void {
+    // Obtener el valor de sessionStorage
+    const authUsername = window.sessionStorage.getItem('AuthUsername');
+
+    // Verificar si el valor es "admin"
+    this.isAdminUser = authUsername === 'admin';
   }
+  isAdminUser = false;
 
   onSubmit(): void {
     // Asignamos la URL de la imagen seleccionada al objeto proyecto

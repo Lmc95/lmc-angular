@@ -27,6 +27,7 @@ import { EditPerfilComponent } from './componentes/perfil/edit-perfil.component'
 import { NewProjectsComponent } from './componentes/proyectos/new-projects.component';
 import { ImagenPerfilService } from './service/imagen-perfil.service';
 import { EditProjectsComponent } from './componentes/proyectos/edit-projects.component';
+import { LoadingComponent } from './componentes/home/loading.component';
 
 @NgModule({
   declarations: [
@@ -47,7 +48,8 @@ import { EditProjectsComponent } from './componentes/proyectos/edit-projects.com
     PerfilComponent,
     EditPerfilComponent,
     NewProjectsComponent,
-    EditProjectsComponent
+    EditProjectsComponent,
+    LoadingComponent,
   ],
   imports: [
     BrowserModule,

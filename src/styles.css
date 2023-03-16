@@ -5,4 +5,5 @@
 body {
   background: rgb(0,22,47);
   background: linear-gradient(270deg, rgba(0,22,47,1) 20%, rgba(0,73,131,1) 100%);
+  width: 100%;
 }

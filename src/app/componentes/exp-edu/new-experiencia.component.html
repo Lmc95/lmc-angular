@@ -1,4 +1,13 @@
-<div class="container-md">
+<div class="nuevo-perfil-permisos container-md d-flex justify-content-center align-items-center" *ngIf="!isAdminUser">
+  <div class="cont-aviso">
+    <h2>No tienes permisos para añadir experiencia</h2>
+    <h3>Inicia sesion y vuelve a intentar.</h3>
+    <br>
+    <a aria-current="page" href="">Volver</a>
+  </div>
+</div>
+
+<div class="container-md" *ngIf="isAdminUser">
   <div id="formulario-nuevaexp" class="row container-md">
     <div class="col-md-8">
       <h2>Nueva experiencia laboral/personal</h2>
