@@ -1,27 +1,24 @@
-# Angular
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 15.0.3.
+# Portfolio Web - Argentina Programa
 
-## Development server
+Bienvenidos a la parte frontend de mi portfolio web de Argentina Programa (#YoProgramo)
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The application will automatically reload if you change any of the source files.
+Repositorio backend - [lmc-backend](https://github.com/Lmc95/lmc-backend)
 
-## Code scaffolding
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
 
-## Build
+## Detalles
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory.
+* Utilizando Angular se realizo el portfolio web junto con HTML, CSS + Bootstrap, TypeScript.
 
-## Running unit tests
+## Portfolio (Navegación)
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
+* Se puede visualizar todo sin necesidad de estar logeado, sin acceso a la edicion y creación de datos.
 
-## Running end-to-end tests
+* En caso de querer crear, editar o borrar datos de perfil, experiencia, educacion, habilidades y proyectos, deberas iniciar sesion como administrador.
 
-Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To use this command, you need to first add a package that implements end-to-end testing capabilities.
+* El deploy del mismo esta en Render actualmente y es un poco lento al principio ya que es un plan free, pero abajo dejare unas vista de "video" para que se pueda visualizar el funcionamiento.
 
-## Further help
+## Funcionamiento de Portfolio
 
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
+
