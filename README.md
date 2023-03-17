@@ -17,7 +17,7 @@ Repositorio backend - [lmc-backend](https://github.com/Lmc95/lmc-backend)
 
 * En caso de querer crear, editar o borrar datos de perfil, experiencia, educacion, habilidades y proyectos, deberas iniciar sesion como administrador.
 
-* El deploy del mismo esta en Render actualmente y es un poco lento al principio ya que es un plan free, pero abajo dejare unas vista de "video" para que se pueda visualizar el funcionamiento.
+* El deploy del Frontend esta en Firebase y el backend en Render, es un poco lento al principio ya que es un plan free, pero abajo dejare unas vista de "video" para que se pueda visualizar el funcionamiento.
 
 ## Funcionamiento de Portfolio
 
